@@ -14,4 +14,8 @@ public class Author {
     public String getLastName() {
         return lastName;
     }
+
+    public String toString() {
+        return getFistName() + " " + getLastName();
+    }
 }
