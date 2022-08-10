@@ -29,4 +29,10 @@ public class Author {
         boolean Eq = fistName.equals(aNew.fistName) && lastName.equals(aNew.lastName);
         return Eq;
     }
+
+    public int hashCode() {
+        return Objects.hash(fistName,lastName);
+    }
+
+
 }

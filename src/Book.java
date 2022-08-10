@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Book {
     private String authorName;
     private String bookName;
@@ -37,6 +39,10 @@ public class Book {
         Book bookNew = (Book) other;
         boolean bEq = bookName.equals(bookNew.bookName) && authorName.equals(bookNew.authorName);
         return bEq;
+    }
+
+    public int hashCode() {
+        return Objects.hash(bookName,authorName);
     }
 
 }
