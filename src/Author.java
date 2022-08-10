@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Author {
     private String fistName;
     private String lastName;
@@ -17,5 +19,14 @@ public class Author {
 
     public String toString() {
         return getFistName() + " " + getLastName();
+    }
+
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Author aNew = (Author) other;
+        boolean Eq = fistName.equals(aNew.fistName) && lastName.equals(aNew.lastName);
+        return Eq;
     }
 }

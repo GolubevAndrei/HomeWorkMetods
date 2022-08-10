@@ -30,4 +30,13 @@ public class Book {
         return getBookName() + " " + getAuthorName() + " " + getBookYear();
     }
 
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Book bookNew = (Book) other;
+        boolean bEq = bookName.equals(bookNew.bookName) && authorName.equals(bookNew.authorName);
+        return bEq;
+    }
+
 }
